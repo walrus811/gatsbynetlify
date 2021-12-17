@@ -1,0 +1,26 @@
+---
+date: 2021-08-12
+title: My Second Blog
+description: This is my second MDX blog post.
+---
+
+import { graphql } from 'gatsby';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+
+export const query = graphql`
+  query CocktailQuery2 {
+    file(name: { eq: "smashburger" }) {
+      childImageSharp {
+        gatsbyImageData(placeholder: DOMINANT_COLOR)
+      }
+    }
+  }
+`;
+
+# Oh Dang
+
+<GatsbyImage
+  image={getImage(props.data.file)}
+  alit="a cocktail set inside flowers"
+/>
+This blog is galaxy!
